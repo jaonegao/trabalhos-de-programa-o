@@ -1,0 +1,47 @@
+Algoritmo "Quantidade de consoantes"
+// Disciplina  :  Lógica de Programação e Algoritmos
+//
+// Descrição   : Imprime o número de letras vogais digitadas na frase do usuário
+// Autor(a)    : GKuze
+// Data atual  : 27/06/2018
+
+Var
+
+entrada, letra: caractere
+compEntr: inteiro //tamanho da "string" que o usuário digitou
+nA, nE, nI, nO, nU: inteiro //numero de vezes que cada vogal aparece
+i: inteiro // variável de varredura do para-faca
+
+
+Inicio
+escreva("Digite uma frase, por obséquio: ")
+leia(entrada)
+
+compEntr <- compr(entrada) // pega o comprimento da entrada
+
+para i de 1 ate compEntr faca //para cada uma das letras, faça
+   letra <- copia(entrada, i, 1)
+   escolha ( minusc(letra)) // minusc() transforma um caractere (ou mais) em minúsculo
+   caso "a"
+      nA <- nA + 1
+   caso "e"
+      nE <- nE + 1
+   caso "i"
+      nI <- nI + 1
+   caso "o"
+      nO <- nO + 1
+   caso "u"
+      nU <- nU + 1
+   fimescolha
+fimpara
+
+limpatela
+
+escreval("A: ", nA)
+escreval("E: ", nE)
+escreval("I: ", nI)
+escreval("O: ", nO)
+escreval("U: ", nU)
+
+
+Fimalgoritmo
